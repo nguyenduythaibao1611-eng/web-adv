@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Women's Products</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- Thin demo frame keeps the whole storefront visually contained. -->
+	<main class="storefront">
+		<!-- Header contains the store identity and category navigation. -->
+		<header class="site-header">
+			<div class="brand">
+				<h1>Women's Products</h1>
+				<span class="brand-line" aria-hidden="true"></span>
+			</div>
+			<nav class="category-nav" aria-label="Product categories">
+				<button class="category-link active" type="button" data-filter="all">All</button>
+				<button class="category-link" type="button" data-filter="clothings">Clothings</button>
+				<button class="category-link" type="button" data-filter="bags">Bags</button>
+				<button class="category-link" type="button" data-filter="shoes">Shoes</button>
+				<button class="category-link" type="button" data-filter="watches">Watches</button>
+				<button class="category-link" type="button" data-filter="googles">Googles</button>
+			</nav>
+		</header>
+
+		<div class="header-rule" aria-hidden="true"></div>
+
+		<!-- Main grid: product collection on the left, campaign banner on the right. -->
+		<section class="catalog-layout" aria-label="Women's product collection">
+			<div class="product-grid">
+				<!-- Product cards are filtered by their data-category value in script.js. -->
+				<article class="product-card" data-category="bags">
+					<div class="product-image-wrap">
+						<img src="image/anh1.png">
+						<span class="product-tag">SALE</span>
+					</div>
+					<div class="product-info">
+						<h2>Women Bags</h2>
+						<div class="product-rule" aria-hidden="true"></div>
+						<p class="price"><span class="original-price">€100.00</span><strong>€50.00</strong></p>
+						<button class="cart-button" type="button">ADD TO CART</button>
+					</div>
+				</article>
+
+				<article class="product-card" data-category="googles">
+					<div class="product-image-wrap">
+						<img src="image/anh2.png">
+					</div>
+					<div class="product-info">
+						<h2>Google</h2>
+						<div class="product-rule" aria-hidden="true"></div>
+						<p class="price"><strong>€25.00</strong></p>
+						<button class="cart-button" type="button">ADD TO CART</button>
+					</div>
+				</article>
+			</div>
+
+			<!-- Lifestyle campaign banner. -->
+			<aside class="campaign-banner">
+				<div class="banner-content">
+					<p class="banner-kicker">New season edit</p>
+					<h2>FOR WOMEN</h2>
+					<button class="view-button" type="button" data-filter="all">VIEW ALL</button>
+				</div>
+			</aside>
+		</section>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>
